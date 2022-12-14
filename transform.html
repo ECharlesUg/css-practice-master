@@ -87,6 +87,20 @@
         border-radius: 20px;
         padding: 10px 20px;
         text-align: center;
+
+        -ms-transform: translate(-50% -50%);
+        -o-transform: translate(-50% -50%);
+        -moz-transform: translate(-50% -50%);
+        -webkit-transform: translate(-50% -50%);
+        transform: translate(-50% -50%);
+      }
+
+      #first-div {
+        -ms-transform: rotate(40deg);
+        -o-transform: rotate(40deg);
+        -moz-transform: rotate(30deg);
+        -webkit-transform: rotate(30deg);
+        transform: rotate(30deg);
       }
 
       p {
@@ -197,7 +211,7 @@
         like a container for multiple block elements.
       -->
 
-      <div id="grad1">
+      <div id="grad1" class="a">
         <p>
           This page shows the effects of adding gradient styling unto a wbpage
         </p>
