@@ -63,11 +63,25 @@
 
         background-color: #da717f;
         color: #000000;
+
+        -ms-transform: skewX(-5deg);
+        -o-transform: skewX(-5deg);
+        -moz-transform: skewX(-5deg);
+        -webkit-transform: skewX(-5deg);
+        transform: skewX(-5deg);
       }
 
       h1 {
         text-align: center;
         font-size: 40px;
+
+        /* This styles thre heading to grow a factpr of 4.5
+        in the horizontal and vertical direction */
+        -ms-transform: scale(4.5);
+        -o-transform: scale(4.5);
+        -moz-transform: scale(4.5);
+        -webkit-transform: scale(4.5);
+        transform: scal(4.5);
       }
 
       /*
@@ -88,6 +102,9 @@
         padding: 10px 20px;
         text-align: center;
 
+        /* of every browser, we also include the prefixes for the transform propert
+        to try allow our styling to show up properly on as many user browsers
+        as possible. */
         -ms-transform: translate(-50% -50%);
         -o-transform: translate(-50% -50%);
         -moz-transform: translate(-50% -50%);
@@ -95,17 +112,35 @@
         transform: translate(-50% -50%);
       }
 
+      /* this styles the second div to be shifted left by 50% of its
+      width an d up by 120% of its height */
+      #second-div {
+        -ms-transform: translate(-50% -120%);
+        -o-transform: translate(-50% -120%);
+        -moz-transform: translate(-50% -120%);
+        -webkit-transform: translate(-50% -120%);
+        transform: translate(-50% -120%);
+      }
+      /* 
+      This rotates the elemt with the id of
+      first-div by 30 degreea, making it go
+      to the bottom right. 
+      */
       #first-div {
-        -ms-transform: rotate(40deg);
-        -o-transform: rotate(40deg);
+        -ms-transform: rotate(30deg);
+        -o-transform: rotate(30deg);
         -moz-transform: rotate(30deg);
         -webkit-transform: rotate(30deg);
         transform: rotate(30deg);
       }
 
       p {
+        position: relative;
+        left: 50%;
         font-size: 24px;
         color: #313131;
+
+        width: 75%;
       }
 
       #styled-by-id {
