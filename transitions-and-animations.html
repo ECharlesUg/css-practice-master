@@ -13,7 +13,50 @@
 
       body {
         color: midnightblue;
-        background-color: #ffe7ea;
+        background-color: #fff5f6;
+
+        /* Thsi syling isused to craet the state before the animation occurs
+        we want our body to be ocmpletely transparent and shifted up 100px
+        so that ehn the transition occurs the body can fade in and drop down into place */
+        opacity: 0;
+        transform: translateY(-100px);
+
+        /* this defines pur animation
+
+        we define the animation as fade-in.
+        we define the animation duration (how long the naimationn alst) as
+        a
+        1 second. we define the animation timing function( how t moves through the
+        animation) as ease in, which means it will slowly start the animation and speed up to the end
+        wwe define the animation delay as 2 second
+        we define the animation fill directipn ( whethwr the sytling is kept at the dn of the animations
+        or not) to fowards,which means to keep the styling that is at the end of the animation
+
+        other animation properties that we do not define in this eaxap le are:display: animation-iteration-count: display: - HOW MANY TIMES YOU WNAT
+        YOUR ANIMATION to run animationd direct- do you want your animaton to go fowARD? BACKWARD? FOWARD AND THEN bacj=kword
+        backword and then foward;;;*/
+        -o-animation: fade-in 1s ease-in 2s forwards;
+        -moz-animation: fade-in 1s ease-in 2s forwards;
+        -webkit-animation: fade-in 1s ease-in 2s forwards;
+        animation: fade-in 1s ease-in 2s forwards;
+      }
+
+      /* this defiens itself, we use the keyframs to show that we are creating an
+      animation and then we use the same name that we defined in the animation propert (i.e fade in)
+
+      then we define the starting ponit of the animation (from and the styling at the starting point
+      finally we difenr the ending poit of the animation (to ) and the styling at the ending point
+
+      NOTE: you can also define % where different styling occurs (i.e 0% 33% 66% 100%)*/
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+          transform: translateY(-100px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
       #grad1 {
@@ -69,8 +112,7 @@
           color 0.5s ease-in-out;
         -webkit-transition: background-color 0.5s ease-in-out,
           color 0.5s ease-in-out;
-        transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out,
-          transform 0.5s ease-in-out;
+        transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
       }
 
       /* These are the user actions that will start the transtion
@@ -79,9 +121,8 @@
       inside the styling bloc */
 
       nav a:hover nav a:focus {
-        background-color: #d4ebf2;
-        color: blue;
-        transform: translateY(-10px);
+        background-color: #000000;
+        color: rgb(255, 159, 175);
       }
       h1 {
         text-align: center;
