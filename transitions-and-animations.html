@@ -63,8 +63,26 @@
 
         background-color: #da717f;
         color: #000000;
+
+        -o-transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+        -moz-transition: background-color 0.5s ease-in-out,
+          color 0.5s ease-in-out;
+        -webkit-transition: background-color 0.5s ease-in-out,
+          color 0.5s ease-in-out;
+        transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out,
+          transform 0.5s ease-in-out;
       }
 
+      /* These are the user actions that will start the transtion
+      the transition will change the backgeun color and the fornt coloe smotthly
+      brcas we change the back color and font coor
+      inside the styling bloc */
+
+      nav a:hover nav a:focus {
+        background-color: #d4ebf2;
+        color: blue;
+        transform: translateY(-10px);
+      }
       h1 {
         text-align: center;
         font-size: 40px;
@@ -101,7 +119,7 @@
 
       /*
         This styles all spans on the web page to underline the text inside
-        the span and change the text to be italicized. 
+        the span and change the text to be italicized.
       */
       span {
         text-decoration: underline;
@@ -134,7 +152,7 @@
         -webkit-justify-content: center;
         justify-content: center;
 
-        /* This allows us to center our content vertically in the 
+        /* This allows us to center our content vertically in the
         back-to-top corner */
 
         -ms-flex-align: center;
@@ -152,7 +170,7 @@
         /* Thsi allows us to style background of the back to top
         button to be a radial gradient because it it a round button
         the first color is att the center of the rgadient and the second
-        color is at the edge of the round area. 
+        color is at the edge of the round area.
         */
 
         background: -moz-radial-gradient(#91eae4, #86a8e7);
@@ -184,7 +202,7 @@
         </li>
         <li><a href="div-and-span.html" class="nav-link">Divs and Spans</a></li>
         <li>
-          <a href="transitions-and-animations.html"
+          <a href="transitions-and-animations.html" class="nav-link"
             >Transitions and Animations</a
           >
         </li>
